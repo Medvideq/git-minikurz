@@ -21,6 +21,7 @@ https://git-scm.com/downloads
 
 //jak zahajit verzovani projektu?
 //otevreme terminal na slozce, kterou chceme verzovat
+//toto vytvori git historii (vytvori se skryta slouka .git, tuto slozku nikdy nemazejte jinak prijdete o celou historii)
 //v terminalu slozky spustime tento prikaz
 # git init
 
@@ -31,7 +32,6 @@ https://git-scm.com/downloads
 
 //v macu ve finderu se skryte soubory zobrazi touto zkratkou
 //cmd + shift + .
-
 
 //nyni kdyz mate ve slozce uz git, tak kazdy soubor a slozka budou mit u sebe oznaceni v jakem stavu jsou
 U - untracked: soubor je uplne novy a v historii o nem jeste nemame zadny zaznam
@@ -44,9 +44,45 @@ D - deleted: soubor v historii existuje, ale je pripraveny pro odstraneni z prac
 //musime si nastavit jmeno a email
 # git config --global user.email "student@primakurzy.cz"
 # git config --global user.name "Student Student"
+//tyto identifikacni prikaz provadime jen 1x pro vas notebook, pak uz nemusite nikdy tyto prikazy pouzit
+//nema to nic spolecneho s git init
 
-//commitovat se da pomoci prikazu, my ale budeme pouzivat nastroj ve VSC
-//source control (ctrl + shift + g)
+//commitovat se da pomoci pirkazu, my ale budeme pouzivat nastroj ve VSC
+//source control (ctrl + shit + g)
 
 //soubory musime naklikat do staging faze
-//budto tam vlozite vsechno nebo naklikate + jen u nekterych souboru
+//budto tam vlozite vsehcno nebo naklikate + jen uz nekterych souboru
+
+//kazdy commit musi mit zpravu
+//po commitnuti se objevi tlacitko "publish branch"
+//to same talcitko najdeme i dole ve spodnim panelu "mracek s sipkou"
+
+//public branch posle vasi lokalni historii do internetoveho uloziste (GitHub)
+
+//potrebujeme na github ucet: https://github.com/
+
+//gihub nemusite pouzivat pokud chcete vsechno mit jen na vlastnim pocitaci
+
+//po tom co klikente na publish branch, tak vas VSC pri prvnim publishovani vyzve k prihlaseni se k githubu
+//muzete si zvolit zda bude projekt public(verejny) nebo private(privatni)
+
+//tim se github a VSC propoji
+//VSC nasledne odesle vase zdrojove kody do internetu
+
+//na teto adrese pak najdete vas zverejneny projekt
+https://github.com/Pidli/git-minikurz
+
+//pod tlacitkem CODE na strance githubu najdete pocet commitu 
+//muzete commity rozkliknout a podivat se na to jak se projekt vyvijel
+
+//v tlacitku CODE najdete odkaz  pro clonovani projektu
+//kdyz si nekdo bude chtit vas projekt vyvorit na vlastnim pocitaci, tak tento odkaz pouzije pro naclonovani
+
+//projekt je mozne do pocitace vytvorit 2 zpusoby
+//clone: vznikne novy projekt, ktery uz nema zadne spojeni s original projektem
+//fork: vznikne projekt, ktery ma stale odkazy na puvodni historii a muzeme do originalni historie pak prispivat
+
+//klonovat muzete prikazem nebo staci otevrit nove okno VSC a kliknout na tlacitko clone repository
+
+//kdyz forkujete a chcte originalnu autorovi nabidnout svuj kod, tak provedete commit a originalnimu autorovi pak poslete "pull request"
+//autor se na vas pull request podiva a bud provede merge nebo pull request zrusi
